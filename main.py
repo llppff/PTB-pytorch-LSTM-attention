@@ -178,7 +178,7 @@ def evaluate(data_source):
         output_flat = output.view(-1, ntokens)
         total_loss += len(data) * criterion(output_flat, targets).data
         hidden = repackage_hidden(hidden)
-    return total_loss.ietm() / len(data_source)
+    return total_loss / len(data_source)
 
 
 def train():
